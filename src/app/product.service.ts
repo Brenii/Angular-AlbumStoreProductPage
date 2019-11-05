@@ -6,7 +6,7 @@ export class ProductService {
  private _albumUrl='../assets/album.json';
  constructor(private _http:Http) {}//good practice for injecting an istance of a service 
  
- getAlbum(id) {
-  return this._http.get(this._albumUrl).map((response)=>{response.json();})
+ getAlbum(id: number) {
+  return this._http.get(this._albumUrl).map((response)=>{response.json()})
  } 
 }
